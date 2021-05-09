@@ -1,14 +1,9 @@
 import React, { useState } from 'react';
 import { HiMoon, HiSun } from 'react-icons/hi';
 // import { ThemeContext } from '../hooks/useColorMode';
-import { ThemeContext } from './themeContext';
+import { ThemeContext } from '../hooks/themeContext';
 
 export default function Header() {
-	const [hover, setHover] = useState(false);
-
-	function toggleHover() {
-		setHover(!hover);
-	}
 	const { theme, setTheme } = React.useContext(ThemeContext);
 
 	return (

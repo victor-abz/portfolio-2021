@@ -1,8 +1,35 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import MenuItem from './MenuItem';
+import { AiFillHome } from 'react-icons/ai';
+import { FaFileAlt } from 'react-icons/fa';
+import { RiGalleryFill } from 'react-icons/ri';
+import { MdViewHeadline } from 'react-icons/md';
 
 function Index() {
+	const SidebarMenu = [
+		{
+			route: '#',
+			label: 'About Me',
+			Icon: AiFillHome,
+		},
+		{
+			route: '#',
+			label: 'Portfolio',
+			Icon: RiGalleryFill,
+		},
+		{
+			route: '#',
+			label: 'Resume',
+			Icon: FaFileAlt,
+		},
+		{
+			route: '#',
+			label: 'Blog',
+			Icon: MdViewHeadline,
+		},
+	];
 	return (
 		<>
 			<div className="sidebar-header flex items-center justify-center py-4">
@@ -15,7 +42,7 @@ function Index() {
 						/>
 						{/* <span className="ml-3 text-xl">Victor-Abz</span> */}
 
-						<span className="leading-10 text-gray-100 text-center text-lg font-bold ml-1 uppercase">
+						<span className="leading-10 text-center text-lg font-bold ml-1">
 							Victor Abizeyimana
 						</span>
 					</a>
@@ -23,12 +50,15 @@ function Index() {
 			</div>
 			<div className="sidebar-content px-4 py-6">
 				<ul className="flex flex-col w-full">
-					<li className="my-px">
+					{SidebarMenu.map((menu) => (
+						<MenuItem menu={menu} />
+					))}
+					{/* <li className="my-px">
 						<a
 							href="#"
-							className="flex flex-row items-center h-10 px-3 rounded-lg text-gray-700 bg-gray-100"
+							className="flex flex-row items-center h-10 px-3 rounded-lg text-white bg-primary"
 						>
-							<span className="flex items-center justify-center text-lg text-gray-400">
+							<span className="flex items-center justify-center text-lg text-white">
 								<svg
 									fill="none"
 									stroke-linecap="round"
@@ -44,17 +74,12 @@ function Index() {
 							<span className="ml-3">About Me</span>
 						</a>
 					</li>
-					{/* <li className="my-px">
-						<span className="flex font-medium text-sm text-gray-300 px-4 my-4 uppercase">
-							Projects
-						</span>
-					</li> */}
 					<li className="my-px">
 						<a
 							href="#"
-							className="flex flex-row items-center h-10 px-3 rounded-lg text-gray-300 hover:bg-gray-100 hover:text-gray-700"
+							className="flex flex-row items-center h-10 px-3 rounded-lg text-gray-600  dark:text-gray-300 hover:bg-primary hover:text-white"
 						>
-							<span className="flex items-center justify-center text-lg text-gray-400">
+							<span className="flex items-center justify-center text-lg text-gray-600 dark:text-gray-300">
 								<svg
 									fill="none"
 									stroke-linecap="round"
@@ -110,9 +135,6 @@ function Index() {
 								</svg>
 							</span>
 							<span className="ml-3">Blog</span>
-							{/* <span className="flex items-center justify-center text-xs text-red-500 font-semibold bg-red-100 h-6 px-2 rounded-full ml-auto">
-								1k
-							</span> */}
 						</a>
 					</li>
 					<li className="my-px">
@@ -135,8 +157,7 @@ function Index() {
 							</span>
 							<span className="ml-3">Add new</span>
 						</a>
-					</li>
-					``
+					</li> */}
 				</ul>
 			</div>
 		</>

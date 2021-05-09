@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/index.css';
 import App from './App';
-import { ThemeProvider } from './components/themeContext';
-import Background from './components/background';
-import Toggle from './components/themeToggle';
+import { ThemeProvider } from './components/hooks/themeContext';
+import Background from './components/Layout/background';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(

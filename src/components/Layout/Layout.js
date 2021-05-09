@@ -22,8 +22,8 @@ import Sidebar from './Sidebar';
 
 export default function Layout({ children }) {
 	return (
-		<div className="flex flex-row min-h-screen bg-gray-100 dark:bg-black text-gray-800">
-			<aside className="sidebar w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in dark:bg-black">
+		<div className="flex flex-row min-h-screen">
+			<aside className="sidebar w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in">
 				<Sidebar />
 			</aside>
 			<main className="main flex flex-col flex-grow -ml-64 md:ml-0 transition-all duration-150 ease-in">
