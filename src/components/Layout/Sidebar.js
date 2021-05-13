@@ -46,8 +46,8 @@ function Index() {
 			</div>
 			<div className="sidebar-content px-4 py-6">
 				<ul className="flex flex-col w-full">
-					{SidebarMenu.map((menu) => (
-						<MenuItem menu={menu} />
+					{SidebarMenu.map((menu, index) => (
+						<MenuItem menu={menu} key={index} />
 					))}
 				</ul>
 			</div>

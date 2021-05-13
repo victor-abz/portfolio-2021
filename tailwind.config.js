@@ -10,6 +10,9 @@ module.exports = {
 				emerald: colors.emerald,
 				primary: '#92278F',
 			},
+			backgroundImage: () => ({
+				stars: "url('./stars.svg')",
+			}),
 		},
 	},
 	variants: {
